@@ -88,7 +88,7 @@ fn run() -> Result<()> {
         .filter_map(|version| version.release_date.clone());
     let by_date = released.group_by(|date| date.clone());
     for (date, vs) in by_date.into_iter() {
-        println!("{:?} {}", date, vs.count())
+        println!("{} {}", date, vs.count())
     }
     Ok(())
 }
